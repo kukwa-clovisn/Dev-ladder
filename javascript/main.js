@@ -11,7 +11,7 @@ console.log(myStringArr)
 
 let greetings = "good morning developers"
 
-// exercise two: arring a number string in decreasing order using for loop
+// exercise two: arring a number string in decreasing order using for loop =====================================>
 let stringNumber = "123"
 
 function top(val) {
@@ -34,7 +34,7 @@ function top(val) {
 
 console.log(top(stringNumber))
 
-// exercise three: creating a string and reversing its position
+// exercise three: creating a string and reversing its position =====================================================>
 let hello = "hellooo"
 
 // creating a fxn that reverses it
@@ -48,7 +48,7 @@ function reverseString(val) {
 
 console.log(reverseString(hello));
 
-// creating a function that seperates and and pushes it into an array
+//exercise four: creating a function that seperates and and pushes it into an array ============================>
 
 function stringArr(greetings) {
     let Arr = [];
@@ -72,3 +72,5 @@ function stringArr(greetings) {
 }
 
 console.log(stringArr(greetings))
+
+// exercise five:
