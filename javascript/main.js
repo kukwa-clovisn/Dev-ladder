@@ -99,6 +99,9 @@ let box = document.getElementById("box");
 
 let searchVal = searchText.value;
 
+if (searchText.value == "") {
+    box.style.display = "none"
+}
 /**
  * creating the render function that renders the list of possible searches on the viewport
  */
@@ -133,6 +136,8 @@ searchText.addEventListener("keyup", () => {
         } else {
             render(results);
         }
+    } else {
+        box.style.display = "none"
     }
 });
 
@@ -141,7 +146,7 @@ searchText.addEventListener("keyup", () => {
  * incase there is a sentence that some one paste into the search input field
  */
 function searchSentence(sentence) {
-    if (!sentence) {
+    if (!sentence || sentence.length < 1) {
         box.style.display = "none"
         return console.log("no sentence");
     }
@@ -159,3 +164,30 @@ function searchSentence(sentence) {
 
     render(result);
 }
+
+
+/**
+ * copy text functionality
+ */
+
+let copybtn = document.querySelector('#copybtn');
+let pastebtn = document.querySelector('#pastebtn');
+let text = document.querySelector('#copy-text')
+
+copybtn.addEventListener('click', async () => {
+
+    await navigator.clipboard.writeText(text.value);
+    const copied = await navigator.clipboard.readText();
+
+});
+
+cutbtn.addEventListener('click', async () => {
+    await navigator.clipboard.writeText(text.value);
+    const cut = await navigator.clipboard.readText()
+    text.value = await "";
+})
+
+pastebtn.addEventListener('click', async () => {
+    const newText = await navigator.clipboard.readText();
+    searchText.value = await newText;
+})
