@@ -1,0 +1,132 @@
+:root {
+  --text-col: rgb(84, 84, 85);
+}
+
+*,
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: var(--text-col);
+}
+
+.form-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, right bottom, from(#060642), to(#2b2b50));
+  background: linear-gradient(to bottom right, #060642, #2b2b50);
+}
+
+.form-container form {
+  width: 600px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: white;
+  border-radius: 3px;
+  padding: 20px;
+}
+
+.form-container form h1 {
+  text-align: center;
+  text-transform: capitalize;
+  font: 600 30px "Poppins", sans-serif;
+  padding: 10px;
+}
+
+.form-container form .form-input {
+  width: 95%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: auto;
+  padding: 10px 0;
+}
+
+.form-container form .form-input label {
+  font: 600 20px sans-serif;
+  display: block;
+  padding: 3px 0;
+}
+
+.form-container form .form-input input {
+  width: 100%;
+  height: 45px;
+  outline: none;
+  border: 1px solid #ececec;
+  padding: 0 20px;
+  border-radius: 2px;
+  font-weight: 500;
+}
+
+.form-container form .form-input textarea {
+  width: 100%;
+  height: auto;
+  padding: 10px 15px;
+  font: 500 15px "Poppins", sans-serif;
+  border: 1px solid #e6e5e5;
+  outline: none;
+  background: whitesmoke;
+}
+
+.form-container form .btns {
+  width: 95%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: auto;
+  padding: 5px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.form-container form .btns button {
+  width: 200px;
+  height: 50px;
+  border: none;
+  margin: 10px 0;
+  border-radius: 3px;
+  background: mediumseagreen;
+  color: white;
+  text-transform: capitalize;
+  font: 600 20px sans-serif;
+  cursor: pointer;
+}
+
+.form-container form .btns #submit {
+  width: 100%;
+}
+
+.form-container form .btns span {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 50px;
+  cursor: pointer;
+}
+
+.form-container form .btns span img {
+  width: auto;
+  height: 95%;
+}
+/*# sourceMappingURL=styles.css.map */
