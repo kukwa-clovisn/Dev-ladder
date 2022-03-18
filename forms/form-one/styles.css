@@ -1,5 +1,7 @@
 :root {
   --text-col: rgb(84, 84, 85);
+  --btn-col: #3cb371;
+  --btn-hover-col: rgb(6, 218, 101);
 }
 
 *,
@@ -9,6 +11,8 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: var(--text-col);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .form-container {
@@ -106,11 +110,26 @@ body {
   border: none;
   margin: 10px 0;
   border-radius: 3px;
-  background: mediumseagreen;
+  background: var(--btn-col);
   color: white;
   text-transform: capitalize;
   font: 600 20px sans-serif;
   cursor: pointer;
+}
+
+.form-container form .btns button:hover {
+  background: var(--btn-hover-col);
+}
+
+.form-container form .btns button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+@media screen and (max-width: 395px) {
+  .form-container form .btns button {
+    width: 100%;
+  }
 }
 
 .form-container form .btns #submit {
@@ -128,5 +147,18 @@ body {
 .form-container form .btns span img {
   width: auto;
   height: 95%;
+}
+
+@media screen and (max-width: 395px) {
+  .form-container form .btns span {
+    margin: auto;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .form-container form {
+    width: 80%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
